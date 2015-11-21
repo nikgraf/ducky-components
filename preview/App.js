@@ -5,12 +5,20 @@ import 'font-awesome/css/font-awesome.css';
 
 import Dropdown from '../common/Dropdown';
 import DropdownItem from '../common/Dropdown/Item';
+import Modal from '../common/Modal';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false
+    };
+  }
   render() {
     return (
       <div className={styles.wrapper}>
         <h1>/common</h1>
+
           <Preview title="/Dropdown" width={200}>
             <Dropdown label={<span>Some label</span>}>
               <DropdownItem onClick={() => console.log('item1')}>Item 1</DropdownItem>
@@ -22,6 +30,14 @@ export default class App extends React.Component {
               <DropdownItem>Item 2</DropdownItem>
             </Dropdown>
           </Preview>
+
+          <Preview title="/Modal" width={200}>
+            <button onClick={() => this.setState({showModal: true})}>Show modal</button>
+            <Modal onHide={() => this.setState({showModal: false})} show={this.state.showModal}>
+              Modal content
+            </Modal>
+          </Preview>
+
         <h1>/mobile</h1>
         <h1>/pad</h1>
         <h1>/desktop</h1>
