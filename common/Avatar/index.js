@@ -35,6 +35,7 @@ class Avatar extends React.Component {
         );
     }
 }
+
 Avatar.displayName = "Avatar";
 Avatar.propTypes = {
     className: PropTypes.string,

@@ -17,4 +17,20 @@ Header.propTypes = {
     children: React.PropTypes.any
 };
 
+if (process.env.NODE_ENV === 'components') {
+  Header.examples = [{
+    title: 'Some title',
+    subTitle: 'Some subtitle',
+    children: <span>hey hey</span>
+  }, {
+    title: 'Just a title'
+  }, {
+    title: 'Just a title',
+    subTitle: 'With subtitle'
+  }, {
+    title: 'Just a title',
+    subTitle: 'With subtitle'
+  }];
+}
+
 export default Header;

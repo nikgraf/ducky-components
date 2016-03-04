@@ -2,11 +2,6 @@ import React from 'react';
 import styles from './styles.css';
 
 class Dropdown extends React.Component {
-  static propTypes = {
-    label: React.PropTypes.any,
-    children: React.PropTypes.any,
-    right: React.PropTypes.bool
-  }
   constructor(props) {
     super(props);
     this.onWindowClick = this.onWindowClick.bind(this);

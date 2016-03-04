@@ -4,7 +4,7 @@ import Preview from './Preview';
 import 'font-awesome/css/font-awesome.css';
 import './material-ui/css/material-design-iconic-font.css';
 
-const components = {"Header":require('../components/Header').default};
+const components = __COMPONENTS__;
 
 export default class App extends React.Component {
   componentWillMount() {

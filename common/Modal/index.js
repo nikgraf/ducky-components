@@ -2,11 +2,6 @@ import React from 'react';
 import styles from './styles.css';
 
 class Modal extends React.Component {
-  static propTypes = {
-    children: React.PropTypes.any,
-    onHide: React.PropTypes.func.isRequired,
-    show: React.PropTypes.bool
-  }
   constructor(props) {
     super(props);
     this.onWindowClick = this.onWindowClick.bind(this);
