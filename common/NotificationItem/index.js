@@ -48,7 +48,7 @@ class NotificationItem extends React.Component {
 NotificationItem.displayName = "Notification Item";
 NotificationItem.propTypes = {
     children: React.PropTypes.node,
-    dateTime: React.PropTypes.shape({}),
+    dateTime: React.PropTypes.number,
     icon: React.PropTypes.string,
     name: React.PropTypes.string,
     onClick: React.PropTypes.func,
